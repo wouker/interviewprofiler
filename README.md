@@ -2,7 +2,7 @@
 
 CONNECT-ICT
 
-demo tool to guide with he assertion of candidates during an interview.
+demo tool to guide with the assertion of candidates during an interview.
 
 Goal:
 
