@@ -48,7 +48,7 @@ Details:
       * clear button to reset the form (with a warning)
       * export button to export the score
       * general score
-    * tabs with a tab per team
+    * tabs with a tab per theme
     * on each tab an accordion per category wherein questions are set    *
   - management page to edit the json with questions.
 - a score is an integer between 0 and  10. 0 meaning not applicable (should not be evaluated). 1 lowest - 10 highest.
@@ -57,8 +57,8 @@ Details:
 - a theme defines which skill-aspect the question adheres to. All themes are defined in Json and not explicitly known in code.
   Default themes are 'Generic skills' - 'Technical backend' - 'Technical frontend (but can be extended as stated before).
   Each theme should be visualised as a tab on the questions page.
-- a category is a group/container for questions. A theme contains 1 or more categorie (themes with 0 categories are ignored on building of the page). A category is visualised in the header of the accordeon together with its score.
-- a question is a single question with a slider (0 to 10 with default 0) and an inputbox. the value of the slider and inputbox are the same.
+- a category is a group/container for questions. A theme contains 1 or more categories (themes with 0 categories are ignored on building of the page). A category is visualised in the header of the accordeon together with its score. A category is the lowest level we score with a slider (0 to 10 with default 0) and an inputbox. the value of the slider and inputbox are the same.
+- a question is a single question. A single question has no points. The interviewer sets a score on a category based on the answers of the questions. At this point there is no logic to automatically rate questions.
 
 LoadProcess: read json => foreach theme create a tab. => on this tab foreach category create an accordeon => in accordeon the questions
 
