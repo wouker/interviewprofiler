@@ -1,0 +1,72 @@
+.home-container {
+	display: flex; 
+	justify-content: space-between; 
+	flex-wrap: wrap;
+	.home-card {
+		width: 45%; 
+		height: 200px;
+		margin-bottom: 16px; 
+		display: flex; 
+		justify-content: space-between;
+		.home-card-image {
+			background-image: url(../../assets/img/girl.jpg);
+			width: 30%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.home-card-content {
+			width: 65%
+		}
+		.home-card-description {
+			display: flex; align-items: center; justify-content: space-around;
+			.home-card-button {
+				background-color: #2e2d2d; 
+				color: white;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.home-container {
+		display: block; 
+		.home-card {
+			width: 90%;
+			height: 200px;
+			margin-bottom: 16px; 
+			display: block; 
+			.home-card-image {
+				background-image: url(../../assets/img/girl.jpg);
+				width: 100%;
+				height: 50%;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.home-card-content {
+				width: 100%;
+				h1 {
+					font-size: 12pt;
+				}
+				.home-card-details {
+					font-size: 10pt;
+				}
+			}
+			.home-card-description {
+				display: block;
+				button {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					margin-right: 4px;
+					margin-bottom: 4px;
+				}
+			}
+		}
+	}	
+}
+.spacer {
+	flex: 1 1 auto;
+}

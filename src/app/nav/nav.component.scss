@@ -1,0 +1,32 @@
+.toolbar {
+	background-color: #2d2e2e;
+	color: #fff; 
+
+	.spacer {
+		flex: 1 1 auto;
+	}
+
+	.margin-right-icon {
+		margin-right: 12px;
+	}
+
+	button {
+		outline: none;
+	}
+}
+
+.desktop {
+	display: block;
+}
+.mobile {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+}

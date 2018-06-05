@@ -1,0 +1,24 @@
+<mat-toolbar class="toolbar">
+	<mat-icon class="margin-right-icon">pageview</mat-icon>
+	<h1>Interviewer</h1>
+	
+	<div class="spacer"></div>
+	
+	<div class="desktop">
+		<button mat-button routerLink=""> 
+			<mat-icon class="margin-right-icon">home</mat-icon>
+			<span>Home</span>
+		</button>
+	</div>
+	<div class="mobile">
+		<button mat-icon-button [matMenuTriggerFor]="menu">
+			<mat-icon class="margin-right-icon">menu</mat-icon>
+		</button>
+		<mat-menu #menu="matMenu" [overlapTrigger]="false">
+		  	<button mat-menu-item routerLink="">Home</button>
+		</mat-menu>
+	</div>
+</mat-toolbar>
+<mat-card style="height: 32px; display: flex; align-items: center; padding: 0; padding-left: 24px;">
+	<b style="font-size: 10pt">Home</b>
+</mat-card>
