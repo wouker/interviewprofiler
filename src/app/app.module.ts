@@ -21,17 +21,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
-
-
-
-
+import { SectorsComponent, AddSectorDialogComponent } from './sectors/sectors.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
+    AddSectorDialogComponent,
+    SectorsComponent
   ],
+  entryComponents: [AddSectorDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

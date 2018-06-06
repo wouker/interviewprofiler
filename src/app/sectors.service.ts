@@ -35,5 +35,15 @@ export class SectorsService {
     var sectors_by_id = this.sectors.map(sec => sec.id);
     var index = sectors_by_id.indexOf(id);
     this.sectors.splice(index, 1);
-  } 
+  }
+
+  editSector(sector) {
+    var sectors_by_id = this.sectors.map(sec => sec.id);
+    var index = sectors_by_id.indexOf(sector.id);
+    this.sectors[index] = sector;
+  }
+
+  addSector(name) {
+    this.sectors.push({id: 3, name: name, categories: []});
+  }
 }
