@@ -1,0 +1,11 @@
+<div style="width: 70vw; max-width: 300px;">
+	<div>
+		<mat-form-field style="width: 100%;">
+			<input matInput placeholder="Name of Sector" value="" (keyup)="bindSector($event)">
+		</mat-form-field>
+	</div>
+	<div style="margin-top: 10px; float: right">
+		<button mat-button (click)="close()">Cancel</button>
+		<button mat-button (click)="close(data.new_sector)" style="background-color: #2e2d2d; color: white; margin-left: 8px;">Submit</button>		
+	</div>
+</div>

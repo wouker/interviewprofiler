@@ -1,6 +1,6 @@
 <div class="wrapper">
   <h1>Sectors</h1>
-  <button mat-button>Add Sector</button>  
+  <button mat-button (click)="openDialog()">Add Sector</button>  
 </div>
 <b *ngIf="sectors.length < 1; else sectorsList" style="display: flex; justify-content: center;">There are no sectors</b>
 <ng-template #sectorsList>
@@ -10,6 +10,7 @@
         <mat-panel-title style="display: flex; justify-content: space-between; align-items: center;">
           <span>{{sector.name}}</span>
           <div>
+            <button mat-icon-button (click)="closedExpansion()"><mat-icon>add</mat-icon></button>
             <button mat-icon-button (click)="closedExpansion()"><mat-icon>settings</mat-icon></button>
             <button mat-icon-button (click)="deleteSector(sector.id)"><mat-icon>delete</mat-icon></button>
           </div>
