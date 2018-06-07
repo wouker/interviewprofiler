@@ -24,7 +24,7 @@ export class SectorsComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if(result.length > 0) this.addSector(result);
+      if(result != '' && result != undefined) this.addSector(result);
     });
   }
 
@@ -70,10 +70,14 @@ export class AddSectorDialogComponent {
 
 	bindSector(event) {
 		this.data.new_sector = event.target.value;
+    if(event.keyCode == 13) {
+      this.close(this.data.new_sector);
+    }
 	}
+
 
 	close(data) {
 		if(!data) var data = '';
-		this.dialogRef.close(data);
+    this.dialogRef.close(data);
 	}
 }
