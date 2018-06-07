@@ -1,18 +1,41 @@
 <div class="wrapper">
   <h1>Sectors</h1>
-  <button mat-button (click)="openDialog()">Add Sector</button>  
+  <button mat-button (click)="openAddDialog()">Add Sector</button>  
+</div>
+<div style="margin-bottom: 8px;">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <b>Filters</b>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-divider style="margin-bottom: 8px;"></mat-divider>
+      <div class="row" style="display: flex; justify-content: space-between;">
+        <mat-form-field class="col-xs-12 col-md-5">
+          <mat-select placeholder="Choose order style">
+            <mat-option value="alphabet">Alphabetical</mat-option>
+            <mat-option value="newest">Newest</mat-option>
+            <mat-option value="oldest">Oldest</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-md-6">
+          <input matInput placeholder="Name of Sector" (keyup)="bindSearch(expansionPanel, $event)">
+        </mat-form-field>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
 <b *ngIf="sectors.length < 1; else sectorsList" style="display: flex; justify-content: center;">There are no sectors</b>
 <ng-template #sectorsList>
   <mat-accordion>
-    <mat-expansion-panel *ngFor="let sector of sectors" [hideToggle]="true">
+    <mat-expansion-panel *ngFor="let sector of sectors" #expansionPanel [hideToggle]="true">
       <mat-expansion-panel-header>
         <mat-panel-title style="display: flex; justify-content: space-between; align-items: center;">
           <span>{{sector.name}}</span>
           <div>
-            <button mat-icon-button><mat-icon>add</mat-icon></button>
-            <button mat-icon-button><mat-icon>settings</mat-icon></button>
-            <button mat-icon-button (click)="deleteSector(sector.id)"><mat-icon>delete</mat-icon></button>
+            <button mat-icon-button (click)="openEditDialog(expansionPanel, $event, sector)"><mat-icon>settings</mat-icon></button>
+            <button mat-icon-button (click)="openDeleteDialog(expansionPanel, $event, sector)"><mat-icon>delete</mat-icon></button>
           </div>
         </mat-panel-title>
       </mat-expansion-panel-header>

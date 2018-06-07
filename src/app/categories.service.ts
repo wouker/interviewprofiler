@@ -32,7 +32,12 @@ export class CategoriesService {
   			name: 'Git',
   			questions: []
 
-  		}
+  		},
+      {
+        id: 4,
+        name: 'Finances',
+        questions: []
+      }
   	]
   }
 }

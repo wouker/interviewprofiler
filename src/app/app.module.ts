@@ -21,7 +21,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
-import { SectorsComponent, AddSectorDialogComponent } from './sectors/sectors.component';
+import { MatCheckboxModule } from '@angular/material/checkbox'
+import { SectorsComponent, AddSectorDialogComponent, DeleteSectorDialogComponent, EditSectorDialogComponent } from './sectors/sectors.component';
 
 @NgModule({
   declarations: [
@@ -29,16 +30,17 @@ import { SectorsComponent, AddSectorDialogComponent } from './sectors/sectors.co
     HomeComponent,
     NavComponent,
     AddSectorDialogComponent,
-    SectorsComponent
+    SectorsComponent,
+    DeleteSectorDialogComponent,
+    EditSectorDialogComponent
   ],
-  entryComponents: [AddSectorDialogComponent],
+  entryComponents: [AddSectorDialogComponent, DeleteSectorDialogComponent, EditSectorDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    NoopAnimationsModule,
     MatCardModule,
     MatMenuModule,
     MatIconModule,
@@ -48,7 +50,8 @@ import { SectorsComponent, AddSectorDialogComponent } from './sectors/sectors.co
     MatSelectModule,
     MatInputModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

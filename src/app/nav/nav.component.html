@@ -18,9 +18,9 @@
 		<button mat-icon-button [matMenuTriggerFor]="menu">
 			<mat-icon class="margin-right-icon">menu</mat-icon>
 		</button>
-		<mat-menu #menu="matMenu" [overlapTrigger]="false">
-		  	<button mat-menu-item routerLink="">Home</button>
-		  	<button mat-menu-item routerLink="sectors">Sectors</button>
+		<mat-menu #menu="matMenu" class="blue">
+		  	<button mat-menu-item routerLink=""><mat-icon>home</mat-icon> Home</button>
+		  	<button mat-menu-item routerLink="sectors"><mat-icon>category</mat-icon> Sectors</button>
 		</mat-menu>
 	</div>
 </mat-toolbar>
