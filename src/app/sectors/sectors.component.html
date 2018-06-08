@@ -45,7 +45,7 @@
           <ng-template #categoriesList>
             <ul>
               <li *ngFor="let category of sector.categories">
-                <a href="">
+                <a routerLink="categories/{{category}}">
                   {{ getCategoryFromSector(category).name }}
                 </a>
               </li>

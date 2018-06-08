@@ -14,7 +14,7 @@ export class SectorsService {
 
   constructor(private http: HttpClient) { }
 
-  sectors: Array<object> = [
+  sectors: Array<any> = [
     {
       id: 1,
       name: 'IT',
@@ -45,5 +45,11 @@ export class SectorsService {
 
   addSector(name) {
     this.sectors.push({id: 3, name: name, categories: []});
+  }
+
+  getSector(id) {
+    var sectors_by_id = this.sectors.map(sec => sec.id);
+    var index = sectors_by_id.indexOf(parseInt(id, 10));
+    return this.sectors[index];
   }
 }

@@ -1,12 +1,13 @@
 <div style="width: 70vw; max-width: 400px;">
+	<h3>Edit {{data.sector.name}}</h3> <br>
 	<div>
 		<mat-form-field style="width: 100%;">
 			<input matInput placeholder="Edit sector name" [value]="name" (keyup)="bindSectorName($event)">
 		</mat-form-field>
 		<label style="color: #3f51b5; font-size: 10pt;">Choose the categories</label>
- 		<div class="row">
+ 		<div style="display: flex; flex-wrap: wrap;">
  			<mat-checkbox 
- 			class="col-sm-5 col-md-4" 
+ 			style="margin-right: 12px;"
  			*ngFor="let category of data.categories" 
  			(change)="bindSectorCategories(category.id)" 
  			[checked]="data.sector.categories.indexOf(category.id) > -1"

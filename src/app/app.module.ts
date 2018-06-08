@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { SectorsComponent, AddSectorDialogComponent, DeleteSectorDialogComponent, EditSectorDialogComponent } from './sectors/sectors.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SectorsComponent, AddSectorDialogComponent, DeleteSectorDialogComponent
     AddSectorDialogComponent,
     SectorsComponent,
     DeleteSectorDialogComponent,
-    EditSectorDialogComponent
+    EditSectorDialogComponent,
+    CategoriesComponent
   ],
   entryComponents: [AddSectorDialogComponent, DeleteSectorDialogComponent, EditSectorDialogComponent],
   imports: [

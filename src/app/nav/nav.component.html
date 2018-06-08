@@ -10,8 +10,16 @@
 			<span>Home</span>
 		</button>
 		<button mat-button routerLink="sectors"> 
-			<mat-icon class="margin-right-icon">category</mat-icon>
+			<mat-icon class="margin-right-icon">table_chart</mat-icon>
 			<span>Sectors</span>
+		</button>
+		<button mat-button routerLink="categories"> 
+			<mat-icon class="margin-right-icon">category</mat-icon>
+			<span>Categories</span>
+		</button>
+		<button mat-button routerLink="jobs"> 
+			<mat-icon class="margin-right-icon">work</mat-icon>
+			<span>Jobs</span>
 		</button>
 	</div>
 	<div class="mobile">
@@ -20,7 +28,9 @@
 		</button>
 		<mat-menu #menu="matMenu" class="blue">
 		  	<button mat-menu-item routerLink=""><mat-icon>home</mat-icon> Home</button>
-		  	<button mat-menu-item routerLink="sectors"><mat-icon>category</mat-icon> Sectors</button>
+		  	<button mat-menu-item routerLink="sectors"><mat-icon>table_chart</mat-icon> Sectors</button>
+		  	<button mat-menu-item routerLink="categories"><mat-icon>category</mat-icon> Categories</button>
+		  	<button mat-menu-item routerLink="jobs"><mat-icon>work</mat-icon> Jobs</button>
 		</mat-menu>
 	</div>
 </mat-toolbar>

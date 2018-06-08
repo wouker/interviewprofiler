@@ -37,7 +37,7 @@ export class CategoriesService {
         id: 4,
         name: 'Finances',
         questions: []
-      }
+      },
   	]
   }
 }
